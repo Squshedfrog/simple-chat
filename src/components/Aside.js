@@ -22,7 +22,7 @@ export default function Aside({ setChatId , users }) {
             if (docSnap.exists()) {
                 setConversationList(docSnap.data().conversations)
             } 
-            console.log(docSnap.data().conversations);
+           // console.log(docSnap.data().conversations);
     })
     },[])
 

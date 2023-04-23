@@ -28,11 +28,10 @@ export default function Message({ message, chatId }) {
         }
     }
 
-    // const messageRef = doc(db, `/messages/${chatId}/message_list`, )
+    
 
     const deleteMessage = async (e) => {
-        console.log(message)
-        // await deleteDoc(doc(db, `/messages/${chatId}/message_list/${message}`, message.text == e.target.value))
+        await deleteDoc(doc(db, `/messages/${chatId}/message_list`, message.id))
     }
 
     

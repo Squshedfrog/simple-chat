@@ -2,12 +2,13 @@ import { useState } from "react";
 import { auth } from "../firebase";
 import { creatNewChat } from '../utils/utils'
 import { ChooseRecipient } from "./ChooseRecipient";
+import { TestDelete } from "../TestDbCalls";
 
 export default function ProfileHeader({ setChatId , users, setIsNewChat }) {
     const { uid, displayName, photoURL } = auth.currentUser;
     const [chooseRecipient , setChooseRecipient ] = useState(false)
     
-
+     
     const handleNewChat = (e) => {
         setIsNewChat(true)
         // const simonUserId = "XHukCG7e6XPSVmmhvq2T4h47giy1"
@@ -24,6 +25,6 @@ export default function ProfileHeader({ setChatId , users, setIsNewChat }) {
                 <button onClick={handleNewChat}>new chat</button>
                 
                 {/* {chooseRecipient?<ChooseRecipient users={users}/>:<button onClick={handleNewChat}>new chat</button>} */}
-            </header>
+        </header>
     )
 }
