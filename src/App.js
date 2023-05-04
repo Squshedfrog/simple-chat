@@ -22,7 +22,6 @@ function App() {
     
   if(user && users){
     if(!users.map(user => (user.id)).includes(user.uid)){
-     
       RegisterUser()
       }
     }
